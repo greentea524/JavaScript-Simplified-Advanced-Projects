@@ -64,3 +64,7 @@ body {
 .board > [data-status="marked"] {
   background-color: yellow;
 }
+
+a {
+    color: lightgreen;
+}
