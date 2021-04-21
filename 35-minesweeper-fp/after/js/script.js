@@ -65,15 +65,20 @@ function render() {
 }
 
 function refreshScore() {
-  scoreBoard.innerHTML = score;
+    scoreBoard.innerHTML = score;
 }
 
 function refreshLevel() {
-  level.innerHTML = difficulty;
+    level.innerHTML = difficulty;
 }
 
 function displayMinesLeft() {
-  messageText.innerHTML = "Mines Left: <span data-mine-count></span>"
+    messageText.innerHTML = "Mines Left: <span data-mine-count></span>"
+}
+
+function displayFooterText() {
+    let footerText = document.querySelector(".footertext")
+    footerText.innerHTML = 'Modified by David P. | Made by <a href="https://github.com/WebDevSimplified" target="_blank"> WebDevSimplified </a>'
 }
 
 function getTileElements() {
@@ -113,7 +118,8 @@ boardElement.addEventListener("contextmenu", e => {
 })
 
 boardElement.style.setProperty("--size", BOARD_SIZE)
-render()
+newGame()
+displayFooterText()
 
 function listMinesLeft() {
     let minesLeftText = document.querySelector("[data-mine-count]")
