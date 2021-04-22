@@ -31,7 +31,8 @@ newGameButton.addEventListener("click", e => {
 })
 
 function newGame() {
-
+    console.log('newgame')
+    board = null;
     scoreAdded = false;
 
     var boardSizeChoice = BOARD_SIZE;
@@ -77,7 +78,7 @@ function displayMinesLeft() {
 }
 
 function displayFooterText() {
-    let footerText = document.querySelector(".footertext")
+    let footerText = document.querySelector("#footertext")
     footerText.innerHTML = 'Modified by David P. | Made by <a href="https://github.com/WebDevSimplified" target="_blank"> WebDevSimplified </a>'
 }
 
@@ -119,7 +120,6 @@ boardElement.addEventListener("contextmenu", e => {
 
 boardElement.style.setProperty("--size", BOARD_SIZE)
 newGame()
-displayFooterText()
 
 function listMinesLeft() {
     let minesLeftText = document.querySelector("[data-mine-count]")
@@ -147,6 +147,8 @@ function checkGameEnd() {
         refreshScore();
         refreshLevel();
         messageText.textContent = "You Win" + " +" + thisRoundScore;
+        setTimeout(function(){ newGameButton.click(); }, 1000);
+
     }
 
   }
