@@ -31,7 +31,7 @@ newGameButton.addEventListener("click", e => {
 })
 
 function newGame() {
-    console.log('newgame')
+
     board = null;
     scoreAdded = false;
 
@@ -147,7 +147,7 @@ function checkGameEnd() {
         refreshScore();
         refreshLevel();
         messageText.textContent = "You Win" + " +" + thisRoundScore;
-        setTimeout(function(){ newGameButton.click(); }, 1000);
+        setTimeout(function(){ newGameButton.click(); }, 2000);
 
     }
 
@@ -161,6 +161,7 @@ function checkGameEnd() {
         if (tile.mine) board = revealTile(board, tile)
       })
     })
+    setTimeout(function(){ newGameButton.click(); }, 2000);
   }
 }
 
