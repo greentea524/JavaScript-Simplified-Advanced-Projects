@@ -4,7 +4,7 @@
   "description": "",
   "main": "minesweeper.js",
   "scripts": {
-    "build": "parcel build index.html --out-dir ./build",
+    "build": "parcel build index.html --out-dir ./build --public-url ./",
     "start": "parcel index.html"
   },
   "keywords": [],

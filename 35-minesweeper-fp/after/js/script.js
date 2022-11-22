@@ -77,11 +77,6 @@ function displayMinesLeft() {
     messageText.innerHTML = "Mines Left: <span data-mine-count></span>"
 }
 
-function displayFooterText() {
-    let footerText = document.querySelector("#footertext")
-    footerText.innerHTML = 'Modified by David P. | Made by <a href="https://github.com/WebDevSimplified" target="_blank"> WebDevSimplified </a>'
-}
-
 function getTileElements() {
   return board.flatMap(row => {
     return row.map(tileToElement)
